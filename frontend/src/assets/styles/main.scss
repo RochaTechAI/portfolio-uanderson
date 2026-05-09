@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  
+  body {
+    @apply bg-brand-white text-brand-dark antialiased;
+    font-family: 'Inter', sans-serif;
+    cursor: none; 
+  }
+
+  ::selection {
+    @apply bg-brand-blue/20 text-brand-dark;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-purple;
+  }
+
+  .btn-primary {
+    @apply relative overflow-hidden bg-brand-dark text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-2xl hover:shadow-brand-blue/25;
+  }
+
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-24;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-5xl font-bold tracking-tight;
+  }
+}
